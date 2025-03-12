@@ -11,7 +11,11 @@ Ejemplos:
 */
 export function exercise05(string) {
   // Escribe tu solución aquí
-  const result = "";
-
+  let result = "";
+  let arrayString = string.toLowerCase().split('');
+  arrayString.forEach((char, index) => {
+    result += char.toUpperCase();
+    for(let i = 1;i <= index; i++) result += char;
+  });
   return result;
 }
