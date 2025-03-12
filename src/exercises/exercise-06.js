@@ -13,10 +13,15 @@ Nota: los signos de puntuación, mayúsculas y espacios deben ser ignorados (no 
 /**
  * 
  * @param {*} string 
- * @returns String lowered without spaces
+ * @returns String lowered without spaces/signs
  */
-function stringLowerWithOutSpaces(string) {
-  return string.toLowerCase().replaceAll(' ','');
+function stringLowerWithOutSpacesAndSigns(string) {
+  let pattern = 'abcdefghijklmnñopqrstuvwxyz';
+  let fixedString = [];
+  string.toLowerCase().replaceAll(' ','').split('').forEach(char => {
+    if (pattern.includes(char)) fixedString.push(char);
+  });
+  return fixedString.join('');
 }
 
 /**
@@ -33,33 +38,15 @@ function deleteCentralChar(string,length) {
   return string;
 }
 
-/**
- * 
- * @param {*} string1 
- * @param {*} string2 
- * @returns Check palindrom
- */
-function checkPalindrom(string1, string2, string) {
-  return [string1 === string2] 
+export function exercise06(string) {
+  // Escribe tu solución aquí
+  let stringModified = stringLowerWithOutSpacesAndSigns(string);
+  let stringEvenCharacters = deleteCentralChar(stringModified, stringModified.length);
+  let position = stringEvenCharacters.length/2;
+  let string1 = stringEvenCharacters.substring(0, position);
+  let string2 = stringEvenCharacters.substring(position);
+  string2 = string2.split('').reverse().join('');
+  return (string1 === string2) 
     ? `The phrase '${string}' is a palindrome` 
     : `The phrase '${string}' is NOT a palindrome`;
 }
-
-
-function splitAndCheckString(stringE, string) {
-  let position = stringE.length/2;
-  let string1 = stringE.substring(0, position);
-  let string2 = stringE.substring(position);
-  console.log(checkPalindrom(string1, string2, string));
-}
-
-export function exercise06(string) {
-  let stringModified = stringLowerWithOutSpaces(string);
-  let stringEvenCharacters = deleteCentralChar(stringModified, stringModified.length);
-  splitAndCheckString(stringEvenCharacters, string);
-  // Escribe tu solución aquí
-  // return [condición]
-  //   ? `The phrase '${string}' is a palindrome`
-  //   : `The phrase '${string}' is NOT a palindrome`;
-}
- exercise06("Rats live on no evil star")
