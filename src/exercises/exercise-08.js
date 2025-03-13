@@ -5,6 +5,9 @@ Nota: los siglos comienzan el 1 de enero de un año terminado en 1 y finalizan e
 */
 export function exercise08(year) {
   // Escribe tu solución aquí
+  let century = Math.floor(year / 100);
+  let rest = year % 100;
+  if (rest !== 0) century++;
 
   return `The year ${year} belongs to the ${century}st century`;
 }
