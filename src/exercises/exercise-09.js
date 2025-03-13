@@ -8,29 +8,7 @@ Ejemplo:
   devuelve "The minimum number is 0 and the maximum number is 100 in [0,50,99,49,100]"
 */
 
-/**
- * 
- * @param {*} start 
- * @param {*} end 
- * @returns Random number between start and end
- */
-function getRandomNumber(start, end) {
-  return Math.round(Math.random() * (end - start) + start);
-}
-
-/**
- * 
- * @param {*} arrayNums 
- * @returns Min and max value from arrayNums
- */
-function getMinMax(arrayNums) {
-  let min, max;
-  arrayNums.forEach(number => {
-      if (min === undefined || number < min) min = number;
-      if (max === undefined || number > max) max = number;
-  });
-  return [min, max];
-}
+import { getMinMax, getRandomNumber } from "../utils";
 
 export function exercise09(length, start, end) {
   // Escribe tu solución aquí

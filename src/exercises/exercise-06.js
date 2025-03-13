@@ -10,33 +10,7 @@ Ejemplos:
 Nota: los signos de puntuación, mayúsculas y espacios deben ser ignorados (no incluyas los acentos). 
 */
 
-/**
- * 
- * @param {*} string 
- * @returns String lowered without spaces/signs
- */
-function stringLowerWithOutSpacesAndSigns(string) {
-  let pattern = 'abcdefghijklmnñopqrstuvwxyz';
-  let fixedString = [];
-  string.toLowerCase().replaceAll(' ','').split('').forEach(char => {
-    if (pattern.includes(char)) fixedString.push(char);
-  });
-  return fixedString.join('');
-}
-
-/**
- * 
- * @param {*} string 
- * @param {*} length 
- * @returns String without central char in odd chars lenght
- */
-function deleteCentralChar(string,length) {
-  let centralIndex = parseInt(length/2)
-  if(length % 2 !== 0){
-      return string.substring(0,centralIndex) + string.substring(centralIndex + 1);
-  }
-  return string;
-}
+import {stringLowerWithOutSpacesAndSigns, deleteCentralChar} from '../utils'
 
 export function exercise06(string) {
   // Escribe tu solución aquí

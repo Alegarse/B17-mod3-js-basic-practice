@@ -25,6 +25,6 @@ function getTime(date) {
   return {
     hours: date.getHours(),
     minutes: date.getMinutes(),
-    seconds: date.getSeconds(),
+    seconds: date.getSeconds()
   };
 }
