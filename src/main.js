@@ -13,7 +13,7 @@ showResult(6, exercises.exercise06("Rats live on no evil star"));
 showResult(7, exercises.exercise07(new Date()));
 showResult(8, exercises.exercise08(2000));
 showResult(9, exercises.exercise09(10, 0, 100));
-// showResult(10, exercises.exercise10("Hello world"));
+showResult(10, exercises.exercise10("Hello world"));
 // showResult(11, exercises.exercise11(movies));
 // showResult(12, exercises.exercise12(movies));
 // showResult(13, exercises.exercise13(movies.slice(0, 5)));
