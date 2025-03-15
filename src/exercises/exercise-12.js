@@ -12,14 +12,3 @@ que recibe como parámetro dos cadenas y devuelve -1 si la primera es menor que 
 export function exercise12(movies) {
   // Escribe tu solución aquí
 }
-
-function sortStrings(a, b) {
-  const string1 = a.toLowerCase();
-  const string2 = b.toLowerCase();
-
-  if (string1 < string2) return -1;
-  if (string1 > string2) return 1;
-  return 0;
-}
-
-console.log(typeof 3)
