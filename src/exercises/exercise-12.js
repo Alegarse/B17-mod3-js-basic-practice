@@ -21,3 +21,5 @@ function sortStrings(a, b) {
   if (string1 > string2) return 1;
   return 0;
 }
+
+console.log(typeof 3)
