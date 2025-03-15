@@ -7,12 +7,12 @@ por valoracion (propiedad "rating") de mayor a menor
 
 import { sortNumbers } from "../utils"
 
- /**
-  * 
-  * @param {*} movies 
-  * @returns array movies sorted by rating desc
-  */
-function sortMoviesSteps(movies) {
+/**
+ * 
+ * @param {*} movies 
+ * @returns array movies sorted by rating desc
+ */
+function sortMovies(movies) {
   // 1. Paso función a sort con dos elementos
   // 2. Comparo restando los valores rating de esos dos elementos
   // 3. Resultados: 
@@ -24,6 +24,6 @@ function sortMoviesSteps(movies) {
 
 export function exercise11(movies) {
   // Escribe tu solución aquí
-  let moviesSorted = sortMoviesSteps(movies) 
+  let moviesSorted = sortMovies(movies) 
   return moviesSorted
 }

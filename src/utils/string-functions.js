@@ -85,9 +85,9 @@ export function charPosition(arrayString, arrayAlphabet, positionArray) {
  * @param {*} b 
  * @returns values [-1, 1, 0] to use with sort
  */
-export function sortStrings(a, b) {
-    const string1 = a.toLowerCase();
-    const string2 = b.toLowerCase();
+export function sortStrings(str1,str2) {
+    const string1 = str1.toLowerCase();
+    const string2 = str2.toLowerCase();
 
     if (string1 < string2) return -1;
     if (string1 > string2) return 1;
