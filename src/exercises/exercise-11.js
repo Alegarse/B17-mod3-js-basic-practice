@@ -4,7 +4,11 @@ Escribe una función que, pasándole como parámetro el array de películas 'mov
 exportado en el archivo "data.js", devuelva un array con las peliculas ordenadas 
 por valoracion (propiedad "rating") de mayor a menor  
 */
-
+ /**
+  * 
+  * @param {*} movies 
+  * @returns array movies sorted by rating desc
+  */
 function sortMoviesSteps(movies) {
   // 1. Paso función a sort con dos elementos
   // 2. Comparo restando los valores rating de esos dos elementos
