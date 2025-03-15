@@ -37,3 +37,15 @@ export function sortNumbers(num1, num2) {
     if (num1 > num2) return 1;
     return 0;
 }
+
+/**
+ * 
+ * @param {*} numbers 
+ * @returns Average of number's array
+ */
+export function getAverage(numbers) {
+    let div = numbers.length
+    let acc = 0;
+    numbers.forEach(number => acc = acc + number)
+    return acc/div
+}

@@ -16,7 +16,7 @@ showResult(9, exercises.exercise09(10, 0, 100));
 showResult(10, exercises.exercise10("Hello world"));
 showResult(11, exercises.exercise11(movies));
 showResult(12, exercises.exercise12(movies));
-// showResult(13, exercises.exercise13(movies.slice(0, 5)));
+showResult(13, exercises.exercise13(movies.slice(0, 5)));
 // showResult(14, exercises.exercise14(movies.slice(0, 5), categories));
 // showResult(15, exercises.exercise15(movies.slice(0, 5)));
 // showResult(16, exercises.exercise16(movies));
