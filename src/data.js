@@ -238,5 +238,5 @@ export const movies = [
       "In post-Civil War Wyoming, bounty hunters try to find shelter during a blizzard but get involved in a plot of betrayal and deception. Will they survive?",
     category: "Drama",
     rating: 7.8,
-  },
+  }
 ];
