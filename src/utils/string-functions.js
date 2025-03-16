@@ -93,3 +93,21 @@ export function sortStrings(str1,str2) {
     if (string1 > string2) return 1;
     return 0;
 }
+
+/**
+ * 
+ * @param {*} string 
+ * @returns Object with keys=char and value with counted char
+ */
+export function countChars(string) {
+    let arrayStringChars = string.split('')
+    let arrayCountChars = {}
+    arrayStringChars.forEach(char => {
+        if(Object.keys(arrayCountChars).includes(char)) {
+            arrayCountChars[char] += 1
+        } else {
+            arrayCountChars[char] = 1
+        }
+    })
+    return arrayCountChars
+}

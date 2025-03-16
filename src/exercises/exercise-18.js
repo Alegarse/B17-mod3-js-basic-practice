@@ -9,12 +9,17 @@ Ejemplo: "Hello world"
     e: 1,
     l: 3,
     o: 2,
+    w: 1,
     r: 1,
     d: 1,
 }
 
 Nota: siempre letras minúsculas y sin tildes (para simplificar)
 */
+import { stringLowerWithOutSpacesAndSigns, countChars } from "../utils"
+
 export function exercise18(string) {
   // Escribe tu solución aquí
+  string = stringLowerWithOutSpacesAndSigns(string)
+  return countChars(string)
 }
