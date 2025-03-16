@@ -45,6 +45,7 @@ export function phraseLowerWithOutSpacesAndAcents(string) {
     /**
      * Explicación de normalize
      * Si ponemos que sea de tipo NFD, subdivide los caracteres entre la letra y su agregado, en este caso el acento
+     * Es una especie de replace al que apsamos letra acentuada y devuelve letra y el acento. EJ: replace('á','a´')
      * Están ambos, aunque el console.log no los muestre
      */
 }
