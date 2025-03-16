@@ -14,14 +14,6 @@ Ejemplo: Fibonacci(20) = 6765
 
 Nota: evita llamar a la función con números altos en la versión recursiva.
 */
-/**
- * 
- * fórmula
- * fib(1) = 1;
- * fib(2) = 1;
- * firb(n) = fin(n-2) + fib(n-1)
- * serie 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ... 
- */
 
 export function exercise20(n) {
   // Escribe tu solución aquí
