@@ -7,14 +7,17 @@ Ejemplos:
 "the string 'Code deco' is an isogram"
 "the string 'hello world' is not an isogram"
 */
+
+import { lettersOcurrences } from "../utils";
+
 export function exercise19(string) {
   // Escribe tu solución aquí
 
-  return `the string '${string}' is ${isIsogram ? "" : "not "}an isogram`;
-}
+  let stringLowered = string.replaceAll(' ','').toLowerCase()
+  let stringObjetcOcurrences = lettersOcurrences(stringLowered)
+  let arrayValues = Object.values(stringObjetcOcurrences)
+  const isEqualValue = (value) => value === arrayValues[0];
+  let isIsogram = arrayValues.every(isEqualValue)
 
-function lettersOcurrences(string) {
-  // Función ayudante sugerida que devuelve un objeto
-  // donde las claves son las letras y los valores son
-  // el número de veces que aparecen en la cadena (string)
+  return `the string '${string}' is ${isIsogram ? "" : "not "}an isogram`;
 }

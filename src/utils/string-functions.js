@@ -97,17 +97,17 @@ export function sortStrings(str1,str2) {
 /**
  * 
  * @param {*} string 
- * @returns Object with keys=char and value with counted char
+ * @returns Object with keys=char and value with char's ocurrences
  */
-export function countChars(string) {
+export function lettersOcurrences(string) {
     let arrayStringChars = string.split('')
-    let arrayCountChars = {}
+    let arraylettersOcurrences = {}
     arrayStringChars.forEach(char => {
-        if(Object.keys(arrayCountChars).includes(char)) {
-            arrayCountChars[char] += 1
+        if(Object.keys(arraylettersOcurrences).includes(char)) {
+            arraylettersOcurrences[char] += 1
         } else {
-            arrayCountChars[char] = 1
+            arraylettersOcurrences[char] = 1
         }
     })
-    return arrayCountChars
+    return arraylettersOcurrences
 }

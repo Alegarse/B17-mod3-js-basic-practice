@@ -16,10 +16,10 @@ Ejemplo: "Hello world"
 
 Nota: siempre letras minúsculas y sin tildes (para simplificar)
 */
-import { stringLowerWithOutSpacesAndSigns, countChars } from "../utils"
+import { stringLowerWithOutSpacesAndSigns, lettersOcurrences } from "../utils"
 
 export function exercise18(string) {
   // Escribe tu solución aquí
   string = stringLowerWithOutSpacesAndSigns(string)
-  return countChars(string)
+  return lettersOcurrences(string)
 }
