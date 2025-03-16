@@ -36,12 +36,11 @@ export function exercise20Iterative(n) {
   if (n === 1 || n === 2) return 1;
   let ind1 = 1
   let ind2 = 1
-  let acc = 0
+  let fibonacci = 0
   for(let i = 3; i <= n; i++) {
-    acc += (ind1 + ind2)
-    let aux = ind1 + ind2
+    fibonacci = (ind1 + ind2)
     ind1 = ind2
-    ind2 = aux
+    ind2 = fibonacci
   }
-  return acc
+  return fibonacci
 }
