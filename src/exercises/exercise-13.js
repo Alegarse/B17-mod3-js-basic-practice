@@ -20,7 +20,10 @@ function sortMovies(movies) {
   let average = getAverage(arrayRatingMovies)
   let arrayOrderedMovies = movies.sort((movie1, movie2) => sortNumbers(movie2.rating, movie1.rating))
   arrayOrderedMovies.forEach(movie => {
-    if (movie.rating > average) bestMovies.push(movie)
+    if (movie.rating > average) {
+      const { title, description } = movie
+      bestMovies.push({ title, description })
+    }
   })
   return bestMovies
 }
