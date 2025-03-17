@@ -19,11 +19,14 @@ import { sortStrings } from "../utils"
  */
 function sortMovies(movies) {
   return movies.sort((movie1, movie2) => sortStrings(movie1.title, movie2.title))
+  
 }
 
 
 export function exercise12(movies) {
   // Escribe tu solución aquí
   let moviesSorted = sortMovies(movies)
-  return moviesSorted 
+  let titleMoviesArray = []
+  moviesSorted.forEach( movie => {titleMoviesArray.push(movie.title)})
+  return titleMoviesArray
 }

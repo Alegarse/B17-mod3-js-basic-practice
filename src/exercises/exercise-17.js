@@ -8,9 +8,9 @@ Ejemplo: "This is a hashtag" se transforma en "#ThisIsAHashtag"
 export function exercise17(string) {
   // Escribe tu solución aquí
   let result = '#'
-  let arrayStrings = string.split(' ')
+  let arrayStrings = string.toLowerCase().split(' ')
   arrayStrings.forEach(string => {
-    let arrayString = string.toLowerCase().split('')
+    let arrayString = string.split('')
     arrayString[0] = arrayString[0].toUpperCase()
     result += arrayString.join('') 
   });

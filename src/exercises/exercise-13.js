@@ -31,7 +31,6 @@ function sortMovies(movies) {
 
 export function exercise13(movies) {
   // Escribe tu solución aquí
-  console.log(movies)
   let moviesSorted = sortMovies(movies)
   return moviesSorted
 }
