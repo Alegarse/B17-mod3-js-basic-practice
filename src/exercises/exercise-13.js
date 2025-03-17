@@ -14,19 +14,21 @@ import { sortNumbers, getAverage } from "../utils"
  * @returns array movies sorted by rating desc
  */
 function sortMovies(movies) {
-  let arrayRatingMovies = []
   let bestMovies = []
+  let arrayRatingMovies = []
   movies.forEach(movie => arrayRatingMovies.push(movie.rating))
   let average = getAverage(arrayRatingMovies)
-  movies.forEach(movie => {
+  let arrayOrderedMovies = movies.sort((movie1, movie2) => sortNumbers(movie2.rating, movie1.rating))
+  arrayOrderedMovies.forEach(movie => {
     if (movie.rating > average) bestMovies.push(movie)
   })
-  return bestMovies.sort((movie1, movie2) => sortNumbers(movie2.rating, movie1.rating))
+  return bestMovies
 }
 
 
 export function exercise13(movies) {
   // Escribe tu solución aquí
+  console.log(movies)
   let moviesSorted = sortMovies(movies)
   return moviesSorted
 }
