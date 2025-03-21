@@ -16,7 +16,7 @@ export function exercise10(string) {
   let arrayAlphabet = alphabet.split('')
   // 3. Init the return array
   let positionArray = []
-  // 4. Fill the array with every position os char in alphabet
+  // 4. Fill the array with every position of char in alphabet
   positionArray = charPosition(arrayString, arrayAlphabet, positionArray)
   return positionArray
 }
