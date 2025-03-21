@@ -11,17 +11,21 @@ Ejemplo:
 import { getMinMax, getRandomNumber } from "../utils";
 
 export function exercise09(length, start, end) {
-  // Escribe tu solución aquí
-  let arrayOfRandomNumbers = [];
+  
+  // 1. Init array of random numbers
+  let arrayOfRandomNumbers = []
+  // 2. For length, get the random number and insert it the previous array
+  // checking that this number is not included
   for (let i = 1; i <= length; i++) {
-    let randomNumber;
+    let randomNumber
     do {
-      randomNumber = getRandomNumber(start, end);
+      randomNumber = getRandomNumber(start, end)
     } while (arrayOfRandomNumbers.includes(randomNumber))
-      arrayOfRandomNumbers.push(randomNumber);
+      arrayOfRandomNumbers.push(randomNumber)
   }
-  const min = getMinMax(arrayOfRandomNumbers)[0];
-  const max = getMinMax(arrayOfRandomNumbers)[1];
+  // 3. Extract min & max from the array
+  const min = getMinMax(arrayOfRandomNumbers)[0]
+  const max = getMinMax(arrayOfRandomNumbers)[1]
 
-  return `The minimum number is ${min} and the maximum number is ${max} in ${arrayOfRandomNumbers}`;
+  return `The minimum number is ${min} and the maximum number is ${max} in ${arrayOfRandomNumbers}`
 }

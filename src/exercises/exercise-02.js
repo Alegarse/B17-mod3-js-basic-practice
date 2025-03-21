@@ -5,7 +5,8 @@ Muestra el siguiente mensaje dependiendo de si un número es par o impar:
 Nota: even = par | odd = impar
 */
 export function exercise02(number) { 
-  // Escribe tu solución aquí
-  let result = number === 0 ? 'even' : 'odd';
-  return `Number ${number} is ${result}`;
+  
+  // 1. Check if odd or even with module
+  let result = number % 2 === 0 ? 'even' : 'odd'
+  return `Number ${number} is ${result}`
 }

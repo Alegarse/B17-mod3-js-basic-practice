@@ -6,13 +6,18 @@ Nota: vowels = "aeiouAEIOU" (no incluyas los acentos)
 Atención: cuidado con vocales aisladas y con espacios en blanco dobles
 */
 export function exercise04(string) {
-  const vowels = "aeiouAEIOU";
-  // Escribe tu solución aquí
-  let arrayResult = [];
-  let arrayString = string.split('');
+  const vowels = "aeiouAEIOU"
+  
+  // 1. Init aux array for result
+  let arrayResult = []
+  // 2. Fill array with string's chars
+  let arrayString = string.split('')
+  // 3. Only includes in arrayResult no vowels chars
   arrayString.forEach(char => {
-    if (!vowels.includes(char)) arrayResult.push(char); 
+    if (!vowels.includes(char)) arrayResult.push(char);
   })
-  let result = arrayResult.join('').replaceAll('  ',' ');
-  return result;
+  // 4. Convert arrayResult to String without double spaces
+  let result = arrayResult.join('').replaceAll('  ',' ')
+
+  return result
 }

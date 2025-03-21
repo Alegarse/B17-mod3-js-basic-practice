@@ -10,12 +10,16 @@ Ejemplos:
   exercise05('function') // result: "FUuNnnCcccTttttIiiiiiOooooooNnnnnnnn"
 */
 export function exercise05(string) {
-  // Escribe tu solución aquí
-  let result = "";
-  let arrayString = string.toLowerCase().split('');
+  
+  // 1. Init var result
+  let result = ""
+  // 2. Fill array with lowercase string's chars
+  let arrayString = string.toLowerCase().split('')
+  // 3. For each char, first ocurrence in uppercase, and
+  // with index I know the next ocurrences of this char 
   arrayString.forEach((char, index) => {
-    result += char.toUpperCase();
-    for(let i = 1;i <= index; i++) result += char;
+    result += char.toUpperCase()
+    for(let i = 1;i <= index; i++) result += char
   });
-  return result;
+  return result
 }

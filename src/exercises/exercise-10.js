@@ -8,11 +8,15 @@ que ocupa cada carácter en el abecedario. Para que sea más sencillo, elimina l
 import { phraseLowerWithOutSpacesAndAcents, charPosition } from "../utils";
 
 export function exercise10(string) {
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
-  // Escribe tu solución aquí
-  let arrayString = phraseLowerWithOutSpacesAndAcents(string).split('');
-  let arrayAlphabet = alphabet.split('');
-  let positionArray = [];
-  positionArray = charPosition(arrayString, arrayAlphabet, positionArray);
-  return positionArray;
+  const alphabet = "abcdefghijklmnopqrstuvwxyz"
+  
+  // 1. Convert string cleaned in a chars's array
+  let arrayString = phraseLowerWithOutSpacesAndAcents(string).split('')
+  // 2. alphabet to an alphabet char's array
+  let arrayAlphabet = alphabet.split('')
+  // 3. Init the return array
+  let positionArray = []
+  // 4. Fill the array with every position os char in alphabet
+  positionArray = charPosition(arrayString, arrayAlphabet, positionArray)
+  return positionArray
 }
