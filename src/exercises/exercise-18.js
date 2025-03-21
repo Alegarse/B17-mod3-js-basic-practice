@@ -16,10 +16,13 @@ Ejemplo: "Hello world"
 
 Nota: siempre letras minúsculas y sin tildes (para simplificar)
 */
+// Import declared functions
 import { stringLowerWithOutSpacesAndSigns, lettersOcurrences } from "../utils"
 
 export function exercise18(string) {
-  // Escribe tu solución aquí
+  
+  // 1. Filter string to delete spaces and signs
   string = stringLowerWithOutSpacesAndSigns(string)
+  // 2. Iterate the string to get the letter's ocurrence and return the result
   return lettersOcurrences(string)
 }

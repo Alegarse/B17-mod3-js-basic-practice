@@ -18,15 +18,23 @@ import { sortStrings } from "../utils"
  * @returns array movies sorted by title asc
  */
 function sortMovies(movies) {
+  // 1. Function sort to movies array with array element's pair
+  // 2. Compare rating values for both elements
+  // 3. Values [+,-,0] into sort() returns [asc order]: 
+  //    - positive, movie1 in front of movie2
+  //    - negative, movie1 behind movie2
+  //    - zero, both in equal positions
   return movies.sort((movie1, movie2) => sortStrings(movie1.title, movie2.title))
   
 }
 
 
 export function exercise12(movies) {
-  // Escribe tu solución aquí
+
   let moviesSorted = sortMovies(movies)
+  // 1. Init array to return
   let titleMoviesArray = []
+  // 2. Return an array with title movies ordered
   moviesSorted.forEach( movie => {titleMoviesArray.push(movie.title)})
   return titleMoviesArray
 }

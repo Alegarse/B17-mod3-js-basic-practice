@@ -26,7 +26,9 @@ Pista: usa el método "groupBy" de la clase Object
 */
 
 export function exercise15(movies) {
-  // Escribe tu solución aquí
+  // 1. Calsify movies with function Object.groupBy
+  // 2. Need array parameter, propierty in argument like filter 
+  // and return array orderer and calsified by this filter 
   const result = Object.groupBy(movies, ({ category }) => category)
   return result
 }

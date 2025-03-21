@@ -14,11 +14,17 @@ import { sortNumbers, getAverage } from "../utils"
  * @returns array movies sorted by rating desc
  */
 function sortMovies(movies) {
+  // 1. Init array top return
   let bestMovies = []
+  // 2. Init aux array for movie ratings[ to get average rating]
   let arrayRatingMovies = []
+  // 3. Fill the rating aray
   movies.forEach(movie => arrayRatingMovies.push(movie.rating))
+  // 4. Defined funtion to get the average of numbers
   let average = getAverage(arrayRatingMovies)
+  // 5. First get an ordered movies array by rating
   let arrayOrderedMovies = movies.sort((movie1, movie2) => sortNumbers(movie2.rating, movie1.rating))
+  // 6. In return array only insert {title, description} if movie rating is bigger than average
   arrayOrderedMovies.forEach(movie => {
     if (movie.rating > average) {
       const { title, description } = movie
@@ -30,7 +36,7 @@ function sortMovies(movies) {
 
 
 export function exercise13(movies) {
-  // Escribe tu solución aquí
+  
   let moviesSorted = sortMovies(movies)
   return moviesSorted
 }

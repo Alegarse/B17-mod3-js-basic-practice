@@ -13,17 +13,17 @@ import { sortNumbers } from "../utils"
  * @returns array movies sorted by rating desc
  */
 function sortMovies(movies) {
-  // 1. Paso función a sort con dos elementos
-  // 2. Comparo restando los valores rating de esos dos elementos
-  // 3. Resultados: 
-  //    - positivo, movie2 irá delante de movie1
-  //    - negativo, movie1 irá delante de movie2
-  //    - cero, ambos permanecen en la misma posición
+  // 1. Function sort to movies array with array element's pair
+  // 2. Compare rating values for both elements
+  // 3. Values [+,-,0] into sort() returns [desc order]: 
+  //    - positive, movie2 in front of movie1
+  //    - negative, movie2 behind movie1
+  //    - zero, both in equal positions
   return movies.sort((movie1, movie2) => sortNumbers(movie2.rating, movie1.rating))
 }
 
 export function exercise11(movies) {
-  // Escribe tu solución aquí
+  
   let moviesSorted = sortMovies(movies) 
   return moviesSorted
 }
